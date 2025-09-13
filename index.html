@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kleet's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="rounded.png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <img src="https://yt3.googleusercontent.com/WLOSeRz_sDq4mpawh54XaNE9vyjomLx9AcEUUwd9fdgLc6dOgRJEPdB2RfqNFefu_r8vTqTmAvo=s160-c-k-c0x00ffffff-no-rj" alt="Profile Picture" class="profile-pic">
+    <h1 id="typing-text" class="fade-in"></h1>
+    <p>I build bots, websites, and more.</p>
+    <p>Email: <a href="mailto:kleet@kleetdev.com">kleet@kleetdev.com</a></p>
+  </header>
+
+  <!-- Projects -->
+  <section class="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Revolution</h3>
+        <p>Revolution is a verified ER:LC management bot. https://revolutionbot.xyz</p>
+      </div>
+      <div class="project-card">
+        <h3>This Website</h3>
+        <p>This is the website you're on!</p>
+      </div>
+      <div class="project-card">
+        <h3>Your Idea</h3>
+        <p>Bring your idea to life. Let’s create something awesome together.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills">
+    <h2>Skills</h2>
+    <div class="skill"><p>Python</p><div class="bar"><div style="width: 75%"></div></div></div>
+    <div class="skill"><p>Discord Bots</p><div class="bar"><div style="width: 95%"></div></div></div>
+  </section>
+
+  <!-- About Me -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>I'm Kleet, a 14-year-old developer passionate about making useful and fun tools. Since age 7, I’ve been exploring coding, creating bots, games, and all sorts of websites that people can enjoy every day. I run Cenoryx Security and the very website you're on right now!</p>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Discord: @kleetyt</p>
+    <p>Email: <a href="mailto:kleet@kleetdev.com">kleet@kleetdev.com</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Kleet</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Typing effect
+      const text = "Hello, I'm Kleet";
+      const target = document.getElementById("typing-text");
+      let i = 0;
+
+      function type() {
+        if (i < text.length) {
+          target.textContent += text.charAt(i);
+          target.classList.add("typing-cursor");
+          i++;
+          setTimeout(type, 100); // typing speed
+        } else {
+          target.classList.remove("typing-cursor");
+        }
+      }
+      setTimeout(type, 800);
+
+      // Announcement close
+      const closeBtn = document.getElementById("close-announcement");
+      const announcement = document.getElementById("announcement");
+      closeBtn.addEventListener("click", () => {
+        announcement.style.transition = "opacity 0.5s";
+        announcement.style.opacity = "0";
+        setTimeout(() => announcement.remove(), 500);
+      });
+    });
+  </script>
+</body>
+</html>
